@@ -1,7 +1,9 @@
 package com.example.calculator
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var calTextView: TextView
     private lateinit var resTextView: TextView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -46,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         val mulButton = findViewById<Button>(R.id.mul)
         val divButton = findViewById<Button>(R.id.div)
         val equButton = findViewById<Button>(R.id.equ)
-        val cancelOneButton = findViewById<Button>(R.id.cancelOne)
+        val cancelOneButton = findViewById<ImageView>(R.id.cancelOne)
         val removeAllButton = findViewById<Button>(R.id.removeAll)
 
         val decButton = findViewById<Button>(R.id.dec)
@@ -106,7 +109,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // Remove last character from firstNumber
                 if (firstNumber.isNotEmpty()) {
-                    firstNumber = firstNumber.dropLast(1)
+                    firstNumber = ""
                     calTextView.text = ""
                     resTextView.text = "0"
                 }
