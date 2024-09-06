@@ -31,7 +31,7 @@
                         android:id="@+id/cal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="50sp"
+                        android:textSize="30sp"
                         android:textColor="#939393"
                         android:textAlignment="textEnd"
                         android:layout_gravity="center_vertical"/>
@@ -47,7 +47,7 @@
                         android:id="@+id/res"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="70sp"
+                        android:textSize="50sp"
                         android:textAlignment="textEnd"
                         android:layout_gravity="center_vertical"
                         android:text="0"/>
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="vertical"
-                    android:layout_weight="2">
+                    android:layout_weight="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -67,14 +67,15 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:layout_margin="3dp"
                             android:id="@+id/removeAll"
                             android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:text="C"
-                            android:textSize="20sp"
                             android:backgroundTint="#59757B"
-                            android:layout_height="match_parent"/>
+                            android:text="C"
+                            android:textSize="20sp" />
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -84,7 +85,7 @@
                             <ImageView
                                 android:id="@+id/cancelOne"
                                 android:layout_width="0dp"
-                                android:layout_height="60dp"
+                                android:layout_height="40dp"
                                 android:layout_weight="1"
                                 android:layout_gravity="center_horizontal"
                                 android:src="@drawable/img"/>
