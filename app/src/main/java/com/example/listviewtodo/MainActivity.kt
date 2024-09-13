@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     private val items = mutableListOf<Item>()
     private lateinit var adapter: ItemAdapter
     private var clicked = 0;
+    private var position1 = 0;
+    private var position2 = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,10 +50,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
         listView.setOnItemClickListener { parent, view, position, id ->
-            clicked = clicked + 1
+            clicked += 1
 
-            if(clicked > 1){
-                showEditDeleteDialog(position)
+            if(clicked == 1) {
+                this.position1 = position
+            }
+            else {
+                this.position2 = position
+                if(position1 == position2){
+                    showEditDeleteDialog(position)
+                }
+                else {
+                    position1 = position2
+                    clicked -= 1
+                }
             }
         }
     }
