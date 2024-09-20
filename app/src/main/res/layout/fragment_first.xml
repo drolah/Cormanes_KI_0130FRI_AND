@@ -23,7 +23,7 @@
                 android:layout_margin="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kim Harold A. Cormanes"/>
+                android:text="Kim Harold Cormanes"/>
             <TextView
                 android:layout_margin="5dp"
                 android:layout_width="wrap_content"
